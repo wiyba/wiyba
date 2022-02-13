@@ -1,21 +1,21 @@
-## Hi there <img src="https://raw.githubusercontent.com/NONPLAYT/NONPLAYT/main/.github/wave.gif" width="30px"> 
-<img align="right" src="https://avatars.githubusercontent.com/u/81859776?v=4" width="200" />
-I'm a Xenolit, a man from somewhere on earth. Now I'm learning to code in Python and JavaScript, and I like to play games like minecraft, fortnite, roblox, genshin impact etc. 
+## Hi there <img src="https://raw.githubusercontent.com/Xenolit/Xenolit/main/.github/wave.gif" width="30px"> 
+<img align="right" src="https://avatars.githubusercontent.com/u/76615486?v=4" width="200" />
+I'm NONPLAY, An developer from somewhere in the earth. I like to code web applications and games. 
   
 Thanks for visiting my github profile. Have a great day ahead!~
   
 <h2 align="center"> ✨ About Me ✨</h2>
 
 ```js
-const Xenolit = {
+const NONPLAY = {
     FavouriteLanguage: "Javascript/Python",
-    OpenedIssues: 22,
-    OpenedPullRequests: 6,
-    TotalCommits: 576,
-    Stars: 17,
+    OpenedIssues: {{ ISSUES }},
+    OpenedPullRequests: {{ PULL_REQUESTS }},
+    TotalCommits: {{ COMMITS }},
+    Stars: 0,
     Repositories: {
-       Created: 0,
-       Contributed: 23
+       Created: {{ REPOSITORIES }},
+       Contributed: {{ REPOSITORIES_CONTRIBUTED_TO }}
     },
 }; //More statistics below ;D
 ```
@@ -35,5 +35,5 @@ const Xenolit = {
   </p>
 </details>
   
-<!-- Last updated on Sun Feb 13 2022 12:29:04 GMT+0000 (Coordinated Universal Time) ;-;-->
+<!-- Last updated on Sun Feb 13 2022 17:49:11 GMT+0000 (Coordinated Universal Time) ;-;-->
 <i>Last updated on 13th February 2022 using magic</i> ✨
