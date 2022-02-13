@@ -34,15 +34,15 @@ const WriteReadMe = async () => {
 
   //Creating the text what we gonna save on ReadMe file
   const text = `## Hi there <img src="https://raw.githubusercontent.com/Xenolit/Xenolit/main/.github/wave.gif" width="30px"> 
-<img align="right" src="https://avatars.githubusercontent.com/u/76615486?v=4" width="200" />
-I'm NONPLAY, An developer from somewhere in the earth. I like to code web applications and games. 
+<img align="right" src="https://avatars.githubusercontent.com/u/81859776?v=4" width="200" />
+I'm Xenolit, An developer from somewhere in the earth. I like to code web applications and games. 
   
 Thanks for visiting my github profile. Have a great day ahead!~
   
 <h2 align="center"> ${special?special[0]:"✨"} About Me ${special?special[0]:"✨"}</h2>
 
 \`\`\`js
-const NONPLAY = {
+const Xenolit_ = {
     FavouriteLanguage: "Javascript/Python",
     OpenedIssues: {{ ISSUES }},
     OpenedPullRequests: {{ PULL_REQUESTS }},
