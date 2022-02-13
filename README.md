@@ -1,5 +1,5 @@
 ## Hi there <img src="https://raw.githubusercontent.com/Xenolit/Xenolit/main/.github/wave.gif" width="30px"> 
-<img align="right" src="https://avatars.githubusercontent.com/u/81859776?v=4" width="200" />
+<img align="right" src="https://avatars.githubusercontent.com/u/76615486?v=4" width="200" />
 I'm NONPLAY, An developer from somewhere in the earth. I like to code web applications and games. 
   
 Thanks for visiting my github profile. Have a great day ahead!~
@@ -7,15 +7,15 @@ Thanks for visiting my github profile. Have a great day ahead!~
 <h2 align="center"> ✨ About Me ✨</h2>
 
 ```js
-const Xenolit = {
+const NONPLAY = {
     FavouriteLanguage: "Javascript/Python",
-    OpenedIssues: 0,
-    OpenedPullRequests: 0,
-    TotalCommits: 2,
+    OpenedIssues: {{ ISSUES }},
+    OpenedPullRequests: {{ PULL_REQUESTS }},
+    TotalCommits: {{ COMMITS }},
     Stars: 0,
     Repositories: {
-       Created: 1,
-       Contributed: 0
+       Created: {{ REPOSITORIES }},
+       Contributed: {{ REPOSITORIES_CONTRIBUTED_TO }}
     },
 }; //More statistics below ;D
 ```
@@ -35,5 +35,5 @@ const Xenolit = {
   </p>
 </details>
   
-<!-- Last updated on Sun Feb 13 2022 17:49:11 GMT+0000 (Coordinated Universal Time) ;-;-->
+<!-- Last updated on Sun Feb 13 2022 17:51:26 GMT+0000 (Coordinated Universal Time) ;-;-->
 <i>Last updated on 13th February 2022 using magic</i> ✨
