@@ -9,13 +9,13 @@ Thanks for visiting my github profile. Have a great day ahead!~
 ```js
 const Xenolit_ = {
     FavouriteLanguage: "Javascript/Python",
-    OpenedIssues: 0,
-    OpenedPullRequests: 0,
-    TotalCommits: 428,
+    OpenedIssues: {{ ISSUES }},
+    OpenedPullRequests: {{ PULL_REQUESTS }},
+    TotalCommits: {{ COMMITS }},
     Stars: 0,
     Repositories: {
-       Created: 1,
-       Contributed: 1
+       Created: {{ REPOSITORIES }},
+       Contributed: {{ REPOSITORIES_CONTRIBUTED_TO }}
     },
 }; //More statistics below ;D
 ```
@@ -35,5 +35,5 @@ const Xenolit_ = {
   </p>
 </details>
   
-<!-- Last updated on Thu Apr 07 2022 01:11:48 GMT+0000 (Coordinated Universal Time) ;-;-->
+<!-- Last updated on Thu Apr 07 2022 06:19:31 GMT+0000 (Coordinated Universal Time) ;-;-->
 <i>Last updated on 7th April 2022 using magic</i> ✨
