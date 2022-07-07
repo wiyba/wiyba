@@ -1,4 +1,4 @@
-## Hi there <img src="https://i.pinimg.com/originals/11/6a/fa/116afabf0cd20a15d89779da442c1cae.jpg" width="30px"> 
+## Hi there <img src="https://raw.githubusercontent.com/Xenolit/Xenolit/main/.github/wave.gif" width="30px"> 
 <img align="right" src="https://avatars.githubusercontent.com/u/81859776?v=4" width="200" />
 I'm Xenolit, An developer from somewhere in the earth. I like to code web applications and games. 
   
@@ -9,13 +9,13 @@ Thanks for visiting my github profile. Have a great day ahead!~
 ```js
 const Xenolit_ = {
     FavouriteLanguage: "Javascript/Python",
-    OpenedIssues: 0,
-    OpenedPullRequests: 0,
-    TotalCommits: 1167,
+    OpenedIssues: {{ ISSUES }},
+    OpenedPullRequests: {{ PULL_REQUESTS }},
+    TotalCommits: {{ COMMITS }},
     Stars: 0,
     Repositories: {
-       Created: 1,
-       Contributed: 1
+       Created: {{ REPOSITORIES }},
+       Contributed: {{ REPOSITORIES_CONTRIBUTED_TO }}
     },
 }; //More statistics below ;D
 ```
@@ -35,5 +35,5 @@ const Xenolit_ = {
   </p>
 </details>
   
-<!-- Last updated on Thu Jul 07 2022 12:50:33 GMT+0000 (Coordinated Universal Time) ;-;-->
+<!-- Last updated on Thu Jul 07 2022 12:53:27 GMT+0000 (Coordinated Universal Time) ;-;-->
 <i>Last updated on 7th July 2022 using magic</i> ✨
