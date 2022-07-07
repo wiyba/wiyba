@@ -1,39 +1,12 @@
-## Hi there <img src="https://raw.githubusercontent.com/Xenolit/Xenolit/main/.github/wave.gif" width="30px"> 
-<img align="right" src="https://avatars.githubusercontent.com/u/81859776?v=4" width="200" />
-I'm Xenolit, An developer from somewhere in the earth. I like to code web applications and games. 
-  
-Thanks for visiting my github profile. Have a great day ahead!~
-  
-<h2 align="center"> ✨ About Me ✨</h2>
+<h1 align="center">Hi 👋, I'm Xenolit</h1>
+<h3 align="center">A beginner developer from Russia</h3>
 
-```js
-const Xenolit_ = {
-    FavouriteLanguage: "Javascript/Python",
-    OpenedIssues: 0,
-    OpenedPullRequests: 0,
-    TotalCommits: 1170,
-    Stars: 0,
-    Repositories: {
-       Created: 1,
-       Contributed: 1
-    },
-}; //More statistics below ;D
-```
-  
-<h2 align="center"> 🚀 My Stats 🚀</h2>
-<p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=Xenolit&show_icons=true&theme=radical">
+- 🌱 I’m currently learning **C# and Python**
+
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://discord.gg/xenolit#3058" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="xenolit#3058" height="30" width="40" /></a>
 </p>
-<details>
-  <summary>
-      Even more stats
-  </summary>
-  <p align="center">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Xenolit&theme=tokyonight">
-    <img src="https://github-profile-trophy.vercel.app/?username=Xenolit&theme=dracula">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Xenolit&langs_count=8">
-  </p>
-</details>
-  
-<!-- Last updated on Thu Jul 07 2022 12:53:27 GMT+0000 (Coordinated Universal Time) ;-;-->
-<i>Last updated on 7th July 2022 using magic</i> ✨
+
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/> </a> <a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg" alt="dotnet" width="40" height="40"/> </a> <a href="https://www.adobe.com/in/products/illustrator.html" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg" alt="illustrator" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> <a href="https://unity.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" alt="unity" width="40" height="40"/> </a> </p>
