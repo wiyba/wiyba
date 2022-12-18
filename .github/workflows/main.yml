@@ -1,0 +1,24 @@
+name: Update README with Waka Stats
+on:
+    schedule:
+        # Runs at 5am UTC
+        # ... hopefully
+        # 5am UTC is 12am EST (midnight)
+        - cron: "0 5 * * *"
+    workflow_dispatch:
+
+jobs:
+  update-readme:
+    name: Update README with Code Metrics from Wakatime API
+    runs-on: ubuntu-latest
+    steps:
+      - uses: anmol098/waka-readme-stats@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          WAKATIME_URL: "wakapi.dev/api/compat/wakatime"
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          SHOW_LINES_OF_CODE: False
+          SHOW_PROFILE_VIEWS: False
+          SHOW_OS: False
+          SHOW_LOC_CHART: False
+          SHOW_LANGUAGE_PER_REPO: False
