@@ -18,7 +18,22 @@ Here are some of the tools I use to get my work done:
 ![Profile Views](https://komarev.com/ghpvc/?username=Xenolit&color=blue&style=for-the-badge)
 
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-0%20secs-blue)
 
+**🐱 My GitHub Data** 
+
+> 🏆 1,204 Contributions in the Year 2022
+ > 
+> 📦 549 Bytes Used in GitHub's Storage 
+ > 
+> 🚫 Not Opted to Hire
+ > 
+> 📜 1 Public Repository 
+ > 
+> 🔑 0 Private Repositories  
+ > 
+
+ Last Updated on 18/12/2022 15:26:53 UTC
 <!--END_SECTION:waka-->
 
 ### ✉️ Contact Me
