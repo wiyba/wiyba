@@ -24,7 +24,7 @@ Here are some of the tools I use to get my work done:
 
 > 🏆 0 Contributions in the Year 2023
  > 
-> 📦 583 Bytes Used in GitHub's Storage 
+> 📦 585 Bytes Used in GitHub's Storage 
  > 
 > 🚫 Not Opted to Hire
  > 
@@ -61,18 +61,20 @@ Sunday       12 commits     ███░░░░░░░░░░░░░░�
 ⌚︎ Time Zone: Europe/Moscow
 
 💬 Programming Languages: 
-No Activity Tracked This Week
+Lua                      4 mins              ██████████████████░░░░░░░   75.2% 
+JSON                     1 min               ██████░░░░░░░░░░░░░░░░░░░   24.8%
 
 🔥 Editors: 
-No Activity Tracked This Week
+VS Code                  5 mins              █████████████████████████   100.0%
 
 🐱‍💻 Projects: 
-No Activity Tracked This Week
+Unknown Project          4 mins              ██████████████████░░░░░░░   72.72% 
+Downloads                1 min               ██████░░░░░░░░░░░░░░░░░░░   27.28%
 
 ```
 
 
- Last Updated on 27/01/2023 05:11:23 UTC
+ Last Updated on 28/01/2023 05:10:51 UTC
 <!--END_SECTION:waka-->
 
 ### ✉️ Contact Me
