@@ -2,7 +2,7 @@
 
 My name is xenolit, a developer from Russia, Moscow. I just love programming and that's all :D
 
-[![Discord Presence](https://lanyard.cnrad.dev/api/982885434315120653?showDisplayName=true)](https://discord.com/users/982885434315120653)
+[![Discord Presence](https://lanyard.cnrad.dev/api/982885434315120653)](https://discord.com/users/982885434315120653)
 
 Here are some of the tools I use to get my work done:
 
