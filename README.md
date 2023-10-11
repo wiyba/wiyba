@@ -4,17 +4,6 @@ My name is xenolit, a developer from Russia, Moscow. I just love programming and
 
 [![Discord Presence](https://lanyard.cnrad.dev/api/982885434315120653)](https://discord.com/users/982885434315120653)
 
-Here are some of the tools I use to get my work done:
-
-<kbd><img height="32" src="https://img.icons8.com/color/2x/jetbrains.png"></kbd>
-<kbd><img height="32" src="https://img.icons8.com/color/2x/pycharm.png"></kbd>
-<kbd><img height="32" src="https://img.icons8.com/color/2x/intellij-idea.png"></kbd>
-<kbd><img height="32" src="https://img.icons8.com/color/2x/visual-studio.png"></kbd>
-<kbd><img height="32" src="https://img.icons8.com/color/2x/git.png"></kbd>
-<kbd><img height="32" src="https://img.icons8.com/fluent/2x/console.png"></kbd>
-<a href="?#gh-light-mode-only"><kbd><img height="32" src="https://img.icons8.com/metro/2x/mysql.png"></kbd></a>
-<a href="?#gh-dark-mode-only"><kbd><img height="32" src="https://img.icons8.com/FFFFFF/metro/2x/mysql.png"></kbd></a>
-
 ![Operating System](https://img.shields.io/badge/OS-Mac%20OS%20-informational?style=for-the-badge&logo=MacOS&logoColor=white&color=007ec6)
 ![Editor](https://img.shields.io/badge/Editor-JetBrains%20IDEs-informational?style=for-the-badge&logo=JetBrains&logoColor=white&color=007ec6)
 ![Profile Views](https://komarev.com/ghpvc/?username=Xenolit&color=blue&style=for-the-badge)
