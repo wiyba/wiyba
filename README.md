@@ -72,6 +72,6 @@ DivineMC                 0 secs              ░░░░░░░░░░░�
 
 ### ✉️ Contact Me
 
-- [Discord](https://discord.com/users/599601404746792976) / xenolit#3058
+- [Discord](https://discord.com/users/982885434315120653) / xenolit
 - [Discord Server](https://discord.gg/p7cxhw7E2M)
 - [BX Team](https://github.com/BX-Team) / Our organization
