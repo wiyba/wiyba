@@ -13,7 +13,7 @@ My name is xenolit, a developer from Russia, Moscow. I just love programming and
 
 **🐱 My GitHub Data** 
 
-> 📦 649 Bytes Used in GitHub's Storage 
+> 📦 651 Bytes Used in GitHub's Storage 
  > 
 > 🏆 4 Contributions in the Year 2023
  > 
@@ -50,17 +50,20 @@ Sunday                   182 commits         ████░░░░░░░�
 🕑︎ Time Zone: Europe/Moscow
 
 💬 Programming Languages: 
-No Activity Tracked This Week
+Java                     0 secs              ████████████░░░░░░░░░░░░░   49.41 % 
+CLASS                    0 secs              █████████░░░░░░░░░░░░░░░░   34.89 % 
+YAML                     0 secs              ████░░░░░░░░░░░░░░░░░░░░░   15.69 % 
 
 🔥 Editors: 
-No Activity Tracked This Week
+IntelliJ                 0 secs              █████████████████████████   100.00 % 
 
 🐱‍💻 Projects: 
-No Activity Tracked This Week
+nexus                    0 secs              ████████████████░░░░░░░░░   65.11 % 
+EssentialsX 2.21.0 dev   0 secs              █████████░░░░░░░░░░░░░░░░   34.89 % 
 ```
 
 
- Last Updated on 19/11/2023 05:10:19 UTC
+ Last Updated on 22/11/2023 05:11:14 UTC
 <!--END_SECTION:waka-->
 
 ### ✉️ Contact Me
