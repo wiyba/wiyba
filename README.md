@@ -9,6 +9,8 @@ My name is xenolit, a developer from Russia, Moscow. I just love programming and
 ![Profile Views](https://komarev.com/ghpvc/?username=Xenolit&color=blue&style=for-the-badge)
 
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-24%20hrs%2052%20mins-blue)
+
 **🐱 My GitHub Data** 
 
 > 📦 661 Bytes Used in GitHub's Storage 
@@ -21,8 +23,45 @@ My name is xenolit, a developer from Russia, Moscow. I just love programming and
  > 
 > 🔑 0 Private Repository 
  > 
+**I'm an Early 🐤** 
 
- Last Updated on 03/12/2023 05:10:15 UTC
+```text
+🌞 Morning                291 commits         ██████░░░░░░░░░░░░░░░░░░░   23.76 % 
+🌆 Daytime                329 commits         ███████░░░░░░░░░░░░░░░░░░   26.86 % 
+🌃 Evening                310 commits         ██████░░░░░░░░░░░░░░░░░░░   25.31 % 
+🌙 Night                  295 commits         ██████░░░░░░░░░░░░░░░░░░░   24.08 % 
+```
+📅 **I'm Most Productive on Thursday** 
+
+```text
+Monday                   170 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.88 % 
+Tuesday                  168 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.71 % 
+Wednesday                169 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.80 % 
+Thursday                 207 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.90 % 
+Friday                   166 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.55 % 
+Saturday                 163 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.31 % 
+Sunday                   182 commits         ████░░░░░░░░░░░░░░░░░░░░░   14.86 % 
+```
+
+
+📊 **This Week I Spent My Time On** 
+
+```text
+🕑︎ Time Zone: Europe/Moscow
+
+💬 Programming Languages: 
+Java                     0 secs              ████████████████████████░   94.94 % 
+YAML                     0 secs              █░░░░░░░░░░░░░░░░░░░░░░░░   05.06 % 
+
+🔥 Editors: 
+IntelliJ                 0 secs              █████████████████████████   100.00 % 
+
+🐱‍💻 Projects: 
+nexus                    0 secs              █████████████████████████   100.00 % 
+```
+
+
+ Last Updated on 04/12/2023 05:11:19 UTC
 <!--END_SECTION:waka-->
 
 ### ✉️ Contact Me
