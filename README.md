@@ -9,7 +9,7 @@ My name is xenolit, a developer from Russia, Moscow. I just love programming and
 ![Profile Views](https://komarev.com/ghpvc/?username=Xenolit&color=blue&style=for-the-badge)
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-25%20hrs%2025%20mins-blue)
+![Code Time](http://img.shields.io/badge/Code%20Time-25%20hrs%2052%20mins-blue)
 
 **🐱 My GitHub Data** 
 
@@ -61,7 +61,7 @@ html2                    26 mins             ███████████�
 ```
 
 
- Last Updated on 24/01/2024 05:11:38 UTC
+ Last Updated on 25/01/2024 05:11:33 UTC
 <!--END_SECTION:waka-->
 
 ### ✉️ Contact Me
