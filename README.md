@@ -9,7 +9,7 @@ My name is xenolit, a developer from Russia, Moscow. I just love programming and
 ![Profile Views](https://komarev.com/ghpvc/?username=Xenolit&color=blue&style=for-the-badge)
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-25%20hrs%2052%20mins-blue)
+![Code Time](http://img.shields.io/badge/Code%20Time-26%20hrs%2012%20mins-blue)
 
 **🐱 My GitHub Data** 
 
@@ -50,17 +50,18 @@ Sunday                   176 commits         ████░░░░░░░�
 🕑︎ Time Zone: Europe/Moscow
 
 💬 Programming Languages: 
-No Activity Tracked This Week
+Python                   19 mins             ████████████████████████░   94.81 % 
+Other                    1 min               █░░░░░░░░░░░░░░░░░░░░░░░░   05.19 % 
 
 🔥 Editors: 
-No Activity Tracked This Week
+VS Code                  20 mins             █████████████████████████   100.00 % 
 
 🐱‍💻 Projects: 
-No Activity Tracked This Week
+python                   20 mins             █████████████████████████   100.00 % 
 ```
 
 
- Last Updated on 17/02/2024 05:10:01 UTC
+ Last Updated on 18/02/2024 05:09:48 UTC
 <!--END_SECTION:waka-->
 
 ### ✉️ Contact Me
