@@ -2,15 +2,6 @@
 
 My name is xenolit, a developer from Russia, Moscow. I just love programming and that's all :D
 
-[![Discord Presence](https://lanyard.cnrad.dev/api/982885434315120653)](https://discord.com/users/982885434315120653)
-
-![Operating System](https://img.shields.io/badge/OS-Mac%20OS%20-informational?style=for-the-badge&logo=MacOS&logoColor=white&color=007ec6)
-![Editor](https://img.shields.io/badge/Editor-JetBrains%20IDEs-informational?style=for-the-badge&logo=JetBrains&logoColor=white&color=007ec6)
-![Profile Views](https://komarev.com/ghpvc/?username=Xenolit&color=blue&style=for-the-badge)
-
-<!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-28%20hrs%2054%20mins-blue)
-
 **🐱 My GitHub Data** 
 
 > 📦 737 Bytes Used in GitHub's Storage 
