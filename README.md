@@ -4,7 +4,7 @@ my name is xenolit. im a junior developer from russia, moscow. in general i just
 i also participate in some bxteam projects, all links are located below
 ## 💣 Discord Profile
 
-[![Discord Presence](https://lanyard-profile-readme.vercel.app/api/982885434315120653?theme=dark&animated=true&borderRadius=30px&idleMessage=Probably%20doing%20something%20else...)](https://discord.com/users/982885434315120653) 
+[![Discord Presence](https://lanyard-profile-readme.vercel.app/api/982885434315120653?theme=dark&animated=true&borderRadius=30px&idleMessage=Probably%20doing%20nothing)](https://discord.com/users/982885434315120653) 
 
 ## ⌚ Wakatime Stats
 
