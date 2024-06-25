@@ -9,7 +9,58 @@ i also participate in some bxteam projects, all links are located below
 ## ⌚ Wakatime Stats
 
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-28%20hrs%2054%20mins-blue)
 
+**🐱 My GitHub Data** 
+
+> 📦 743 Bytes Used in GitHub's Storage 
+ > 
+> 🏆 16 Contributions in the Year 2024
+ > 
+> 🚫 Not Opted to Hire
+ > 
+> 📜 2 Public Repositories 
+ > 
+> 🔑 0 Private Repositories 
+ > 
+**I'm an Early 🐤** 
+
+```text
+🌞 Morning                291 commits         ██████░░░░░░░░░░░░░░░░░░░   23.35 % 
+🌆 Daytime                344 commits         ███████░░░░░░░░░░░░░░░░░░   27.61 % 
+🌃 Evening                307 commits         ██████░░░░░░░░░░░░░░░░░░░   24.64 % 
+🌙 Night                  304 commits         ██████░░░░░░░░░░░░░░░░░░░   24.40 % 
+```
+📅 **I'm Most Productive on Thursday** 
+
+```text
+Monday                   183 commits         ████░░░░░░░░░░░░░░░░░░░░░   14.69 % 
+Tuesday                  169 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.56 % 
+Wednesday                170 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.64 % 
+Thursday                 211 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.93 % 
+Friday                   169 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.56 % 
+Saturday                 168 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.48 % 
+Sunday                   176 commits         ████░░░░░░░░░░░░░░░░░░░░░   14.13 % 
+```
+
+
+📊 **This Week I Spent My Time On** 
+
+```text
+🕑︎ Time Zone: Europe/Moscow
+
+💬 Programming Languages: 
+No Activity Tracked This Week
+
+🔥 Editors: 
+No Activity Tracked This Week
+
+🐱‍💻 Projects: 
+No Activity Tracked This Week
+```
+
+
+ Last Updated on 25/06/2024 05:12:29 UTC
 <!--END_SECTION:waka-->
 
 ## ✉️ Contact Me
