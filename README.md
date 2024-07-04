@@ -13,7 +13,9 @@ i also participate in some bxteam projects, all links are located below
 
 **🐱 My GitHub Data** 
 
-> 📦 750 Bytes Used in GitHub's Storage 
+> 📦 751 Bytes Used in GitHub's Storage 
+ > 
+> 🏆 16 Contributions in the Year 2024
  > 
 > 🚫 Not Opted to Hire
  > 
@@ -58,7 +60,7 @@ No Activity Tracked This Week
 ```
 
 
- Last Updated on 03/07/2024 05:13:09 UTC
+ Last Updated on 04/07/2024 05:13:41 UTC
 <!--END_SECTION:waka-->
 
 ## ✉️ Contact Me
