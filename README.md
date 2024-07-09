@@ -13,7 +13,7 @@ i also participate in some bxteam projects, all links are located below
 
 **🐱 My GitHub Data** 
 
-> 📦 754 Bytes Used in GitHub's Storage 
+> 📦 755 Bytes Used in GitHub's Storage 
  > 
 > 🏆 16 Contributions in the Year 2024
  > 
@@ -50,17 +50,19 @@ Sunday                   176 commits         ████░░░░░░░�
 🕑︎ Time Zone: Europe/Moscow
 
 💬 Programming Languages: 
-No Activity Tracked This Week
+Other                    4 mins              █████████████░░░░░░░░░░░░   53.95 % 
+Java                     3 mins              ████████████░░░░░░░░░░░░░   46.05 % 
 
 🔥 Editors: 
-No Activity Tracked This Week
+VS Code                  7 mins              █████████████████████████   100.00 % 
 
 🐱‍💻 Projects: 
-No Activity Tracked This Week
+xenolit                  4 mins              █████████████░░░░░░░░░░░░   53.95 % 
+nexus                    3 mins              ████████████░░░░░░░░░░░░░   46.05 % 
 ```
 
 
- Last Updated on 08/07/2024 05:14:28 UTC
+ Last Updated on 09/07/2024 05:12:26 UTC
 <!--END_SECTION:waka-->
 
 ## ✉️ Contact Me
