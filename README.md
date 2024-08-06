@@ -9,7 +9,7 @@ i also participate in some bxteam projects, all links are located below
 ## ⌚ Wakatime Stats
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-29%20hrs%201%20min-blue)
+![Code Time](http://img.shields.io/badge/Code%20Time-29%20hrs%2017%20mins-blue)
 
 **🐱 My GitHub Data** 
 
@@ -60,7 +60,7 @@ course                   15 mins             ███████████�
 ```
 
 
- Last Updated on 05/08/2024 05:13:59 UTC
+ Last Updated on 06/08/2024 05:13:03 UTC
 <!--END_SECTION:waka-->
 
 ## ✉️ Contact Me
