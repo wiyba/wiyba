@@ -9,9 +9,11 @@ i also participate in some bxteam projects, all links are located below
 ## ⌚ Wakatime Stats
 
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-30%20hrs%2027%20mins-blue)
+
 **🐱 My GitHub Data** 
 
-> 📦 770 Bytes Used in GitHub's Storage 
+> 📦 771 Bytes Used in GitHub's Storage 
  > 
 > 🏆 19 Contributions in the Year 2024
  > 
@@ -58,7 +60,7 @@ No Activity Tracked This Week
 ```
 
 
- Last Updated on 04/11/2024 05:14:44 UTC
+ Last Updated on 05/11/2024 05:13:44 UTC
 <!--END_SECTION:waka-->
 
 ## ✉️ Contact Me
