@@ -5,9 +5,12 @@ i also participate in some bxteam projects, all links are located below
 
 ## 💣 Discord Profile
 
-[![Discord Presence](https://lanyard-profile-readme.vercel.app/api/982885434315120653?theme=dark&animated=true&borderRadius=30px&idleMessage=Probably%20doing%20nothing)](https://discord.com/users/982885434315120653) 
+[![Discord Presence](https://lanyard.cnrad.dev/api/982885434315120653?hideBadges=true&showDisplayName=true&hideDecoration=false&hideTimestamp=false&idleMessage=Probably%20doing%20nothing&borderRadius=20px)](https://discord.com/users/982885434315120653)
+
+
 
 ## ✉️ Contact Me
 
-- [My socials](https://feds.lol/xenolit)
+- [Discord](https://discordapp.com/users/982885434315120653)
+- [Telegram](https://t.me/its_wiyba)
 - [Our team](https://github.com/BX-Team)
