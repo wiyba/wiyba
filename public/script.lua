@@ -2,8 +2,8 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "BX Hub",
-   LoadingTitle = "BX Hub Loader",
-   LoadingSubtitle = "By BX Team",
+   LoadingTitle = "BX Hub",
+   LoadingSubtitle = "By BX_Team",
    Theme = "Default",
    DisableRayfieldPrompts = true,
    ConfigurationSaving = {
@@ -12,12 +12,20 @@ local Window = Rayfield:CreateWindow({
       FileName = nil
    },
    KeySystem = false
+   WindowSize = Vector2.new(500, 700)
+   OpenCloseKey = Enum.KeyCode.RightControl
 })
 
 local UniversalTab = Window:CreateTab("Universal", 92875681906793)
-local UniversalHubTab = Window:CreateTab("Hubs", 13518130183)
-local OtherTab = Window:CreateTab("Games", 11894535915)
+local HubsTab = Window:CreateTab("Hubs", 13518130183)
+local GamesTab = Window:CreateTab("Games", 11894535915)
+local SettingsTab  = Window:CreateTab("Settings", 4483345998)
 
+--------------
+-- SETTINGS --
+--------------
+
+-- Script settings
 local Connections = {
    InfiniteJump = nil,
    Noclip = nil,
@@ -25,11 +33,32 @@ local Connections = {
    LoopJumpPower = nil
 }
 
+-- Lighting settings
+local Lighting = game:GetService("Lighting")
+local origSettings = {
+   Brightness = Lighting.Brightness,
+   ClockTime = Lighting.ClockTime,
+   FogEnd = Lighting.FogEnd,
+   FogStart = Lighting.FogStart,
+   GlobalShadows = Lighting.GlobalShadows,
+   OutdoorAmbient = Lighting.OutdoorAmbient,
+   Ambient = Lighting.Ambient
+}
+
+local BrightLoop = nil
+
+-- Player settings
 local defaultSpeed = 16
 local defaultJumpPower = 50
 local speedValue = 16
 local jumpPowerValue = 50
 
+
+----------
+-- TABS --
+----------
+
+-- Universal scripts tab
 local ScriptsCategory = UniversalTab:CreateSection("Scripts")
 
 UniversalTab:CreateButton({
@@ -48,6 +77,7 @@ UniversalTab:CreateButton({
    end,
 })
 
+-- Utilities tab
 local UtilitiesCategory = UniversalTab:CreateSection("Utilities")
 
 UniversalTab:CreateToggle({
@@ -76,19 +106,6 @@ UniversalTab:CreateToggle({
             humanoid.WalkSpeed = defaultSpeed
          end
       end
-   end,
-})
-
-UniversalTab:CreateSlider({
-   Name = "Speed",
-   Range = {2, 60},
-   Increment = 1,
-   Suffix = " Studs",
-   CurrentValue = speedValue,
-   SectionParent = UtilitiesCategory,
-   Flag = "WalkSpeedSlider",
-   Callback = function(Value)
-      speedValue = Value
    end,
 })
 
@@ -123,16 +140,37 @@ UniversalTab:CreateToggle({
    end,
 })
 
-UniversalTab:CreateSlider({
-   Name = "Jump",
-   Range = {2, 120},
-   Increment = 5,
-   Suffix = " Power",
-   CurrentValue = jumpPowerValue,
-   SectionParent = UtilitiesCategory,
-   Flag = "JumpPowerSlider",
-   Callback = function(Value)
-      jumpPowerValue = Value
+UniversalTab:CreateToggle({
+   Name = "Full Bright",
+   CurrentValue = false,
+   Flag = "FullBrightToggle",
+   Callback = function(State)
+      if State then
+         local function applyFullBright()
+            Lighting.Brightness = 2
+            Lighting.ClockTime = 14
+            Lighting.FogEnd = 100000
+            Lighting.GlobalShadows = false
+            Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+         end
+
+         applyFullBright()
+
+         BrightLoop = game:GetService("RunService").RenderStepped:Connect(applyFullBright)
+      else
+         if BrightLoop then
+            BrightLoop:Disconnect()
+            BrightLoop = nil
+         end
+
+         Lighting.Brightness = origSettings.Brightness
+         Lighting.ClockTime = origSettings.ClockTime
+         Lighting.FogEnd = origSettings.FogEnd
+         Lighting.FogStart = origSettings.FogStart
+         Lighting.GlobalShadows = origSettings.GlobalShadows
+         Lighting.OutdoorAmbient = origSettings.OutdoorAmbient
+         Lighting.Ambient = origSettings.Ambient
+      end
    end,
 })
 
@@ -185,35 +223,93 @@ UniversalTab:CreateToggle({
    end,
 })
 
-UniversalHubTab:CreateSection("Scripts")
+-- Hubs scripts
+HubsTab:CreateSection("Scripts")
 
-UniversalHubTab:CreateButton({
+HubsTab:CreateButton({
    Name = "Kncrypt Hub",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Kncrypt/refs/heads/main/Loader.lua"))()
    end,
 })
 
-UniversalHubTab:CreateButton({
+HubsTab:CreateButton({
    Name = "Speed Hub",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()
    end,
 })
 
-OtherTab:CreateSection("Scripts")
+-- Scripts for games
+GamesTab:CreateSection("Scripts")
 
-OtherTab:CreateButton({
+GamesTab:CreateButton({
    Name = "Doors",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
    end,
 })
 
-OtherTab:CreateButton({
+GamesTab:CreateButton({
    Name = "Pressure",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Fire-Hub/main/Loader"))()
+   end,
+})
+
+-- Script settings
+SettingsTab:CreateSection("Settings")
+
+UniversalTab:CreateSlider({
+   Name = "Speed",
+   Range = {2, 60},
+   Increment = 1,
+   Suffix = " Studs",
+   CurrentValue = speedValue,
+   SectionParent = UtilitiesCategory,
+   Flag = "WalkSpeedSlider",
+   Callback = function(Value)
+      speedValue = Value
+   end,
+})
+
+UniversalTab:CreateSlider({
+   Name = "Jump",
+   Range = {2, 120},
+   Increment = 5,
+   Suffix = " Power",
+   CurrentValue = jumpPowerValue,
+   SectionParent = UtilitiesCategory,
+   Flag = "JumpPowerSlider",
+   Callback = function(Value)
+      jumpPowerValue = Value
+   end,
+})
+
+-- Keybinds
+SettingsTab:CreateSection("Binds")
+
+SettingsTab:CreateKeybind({
+   Name = "Toggle Noclip",
+   CurrentKeybind = Enum.KeyCode.N,
+   Flag = "NoclipKeybind",
+   Callback = function()
+      local noclipToggle = Rayfield.Flags["NoclipToggle"]
+      if noclipToggle then
+         noclipToggle:Set(not noclipToggle.CurrentValue)
+      end
+   end,
+})
+
+SettingsTab:CreateKeybind({
+   Name = "Toggle Fly",
+   CurrentKeybind = Enum.KeyCode.V,
+   Flag = "FlyKeybind",
+   Callback = function()
+      local flyToggle = Rayfield.Flags["FlyToggle"]
+      if flyToggle then
+         flyToggle:Set(not flyToggle.CurrentValue)
+      end
    end,
 })
 
