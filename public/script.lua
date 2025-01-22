@@ -19,21 +19,14 @@ local Window = Rayfield:CreateWindow({
 local UniversalTab = Window:CreateTab("Universal", 92875681906793)
 local HubsTab = Window:CreateTab("Hubs", 13518130183)
 local GamesTab = Window:CreateTab("Games", 11894535915)
-local SettingsTab  = Window:CreateTab("Settings", 4483345998)
-
---------------
--- SETTINGS --
---------------
-
--- Script settings
+local SettingsTab = Window:CreateTab("Settings", 4483345998)
 local Connections = {
    InfiniteJump = nil,
    Noclip = nil,
    LoopSpeed = nil,
-   LoopJumpPower = nil
+   LoopJumpPower = nil,
+   Fly = nil
 }
-
--- Lighting settings
 local Lighting = game:GetService("Lighting")
 local origSettings = {
    Brightness = Lighting.Brightness,
@@ -44,21 +37,11 @@ local origSettings = {
    OutdoorAmbient = Lighting.OutdoorAmbient,
    Ambient = Lighting.Ambient
 }
-
 local BrightLoop = nil
-
--- Player settings
 local defaultSpeed = 16
 local defaultJumpPower = 50
 local speedValue = 16
 local jumpPowerValue = 50
-
-
-----------
--- TABS --
-----------
-
--- Universal scripts tab
 local ScriptsCategory = UniversalTab:CreateSection("Scripts")
 
 UniversalTab:CreateButton({
@@ -66,7 +49,7 @@ UniversalTab:CreateButton({
    SectionParent = ScriptsCategory,
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/richie0866/orca/master/public/latest.lua"))()
-   end,
+   end
 })
 
 UniversalTab:CreateButton({
@@ -74,10 +57,9 @@ UniversalTab:CreateButton({
    SectionParent = ScriptsCategory,
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-   end,
+   end
 })
 
--- Utilities tab
 local UtilitiesCategory = UniversalTab:CreateSection("Utilities")
 
 UniversalTab:CreateToggle({
@@ -87,11 +69,11 @@ UniversalTab:CreateToggle({
    Callback = function(State)
       if State then
          Connections.LoopSpeed = game:GetService("RunService").Stepped:Connect(function()
-            local player = game.Players.LocalPlayer
-            local char = player.Character
-            local humanoid = char and char:FindFirstChildWhichIsA("Humanoid")
-            if humanoid then
-               humanoid.WalkSpeed = speedValue
+            local p = game.Players.LocalPlayer
+            local c = p.Character
+            local h = c and c:FindFirstChildWhichIsA("Humanoid")
+            if h then
+               h.WalkSpeed = speedValue
             end
          end)
       else
@@ -99,14 +81,14 @@ UniversalTab:CreateToggle({
             Connections.LoopSpeed:Disconnect()
             Connections.LoopSpeed = nil
          end
-         local player = game.Players.LocalPlayer
-         local char = player.Character
-         local humanoid = char and char:FindFirstChildWhichIsA("Humanoid")
-         if humanoid then
-            humanoid.WalkSpeed = defaultSpeed
+         local p = game.Players.LocalPlayer
+         local c = p.Character
+         local h = c and c:FindFirstChildWhichIsA("Humanoid")
+         if h then
+            h.WalkSpeed = defaultSpeed
          end
       end
-   end,
+   end
 })
 
 UniversalTab:CreateToggle({
@@ -116,12 +98,12 @@ UniversalTab:CreateToggle({
    Callback = function(State)
       if State then
          Connections.LoopJumpPower = game:GetService("RunService").Stepped:Connect(function()
-            local player = game.Players.LocalPlayer
-            local char = player.Character
-            local humanoid = char and char:FindFirstChildWhichIsA("Humanoid")
-            if humanoid then
-               humanoid.UseJumpPower = true
-               humanoid.JumpPower = jumpPowerValue
+            local p = game.Players.LocalPlayer
+            local c = p.Character
+            local h = c and c:FindFirstChildWhichIsA("Humanoid")
+            if h then
+               h.UseJumpPower = true
+               h.JumpPower = jumpPowerValue
             end
          end)
       else
@@ -129,15 +111,15 @@ UniversalTab:CreateToggle({
             Connections.LoopJumpPower:Disconnect()
             Connections.LoopJumpPower = nil
          end
-         local player = game.Players.LocalPlayer
-         local char = player.Character
-         local humanoid = char and char:FindFirstChildWhichIsA("Humanoid")
-         if humanoid then
-            humanoid.UseJumpPower = true
-            humanoid.JumpPower = defaultJumpPower
+         local p = game.Players.LocalPlayer
+         local c = p.Character
+         local h = c and c:FindFirstChildWhichIsA("Humanoid")
+         if h then
+            h.UseJumpPower = true
+            h.JumpPower = defaultJumpPower
          end
       end
-   end,
+   end
 })
 
 UniversalTab:CreateToggle({
@@ -153,16 +135,13 @@ UniversalTab:CreateToggle({
             Lighting.GlobalShadows = false
             Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
          end
-
          applyFullBright()
-
          BrightLoop = game:GetService("RunService").RenderStepped:Connect(applyFullBright)
       else
          if BrightLoop then
             BrightLoop:Disconnect()
             BrightLoop = nil
          end
-
          Lighting.Brightness = origSettings.Brightness
          Lighting.ClockTime = origSettings.ClockTime
          Lighting.FogEnd = origSettings.FogEnd
@@ -171,7 +150,7 @@ UniversalTab:CreateToggle({
          Lighting.OutdoorAmbient = origSettings.OutdoorAmbient
          Lighting.Ambient = origSettings.Ambient
       end
-   end,
+   end
 })
 
 UniversalTab:CreateToggle({
@@ -181,11 +160,11 @@ UniversalTab:CreateToggle({
    Callback = function(State)
       if State then
          Connections.InfiniteJump = game:GetService("UserInputService").JumpRequest:Connect(function()
-            local player = game.Players.LocalPlayer
-            local char = player.Character
-            local humanoid = char and char:FindFirstChildWhichIsA("Humanoid")
-            if humanoid then
-               humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            local p = game.Players.LocalPlayer
+            local c = p.Character
+            local h = c and c:FindFirstChildWhichIsA("Humanoid")
+            if h then
+               h:ChangeState(Enum.HumanoidStateType.Jumping)
             end
          end)
       else
@@ -194,7 +173,7 @@ UniversalTab:CreateToggle({
             Connections.InfiniteJump = nil
          end
       end
-   end,
+   end
 })
 
 UniversalTab:CreateToggle({
@@ -204,10 +183,10 @@ UniversalTab:CreateToggle({
    Callback = function(State)
       if State then
          Connections.Noclip = game:GetService("RunService").Stepped:Connect(function()
-            local player = game.Players.LocalPlayer
-            local char = player.Character
-            if char then
-               for _, part in ipairs(char:GetDescendants()) do
+            local p = game.Players.LocalPlayer
+            local c = p.Character
+            if c then
+               for _, part in ipairs(c:GetDescendants()) do
                   if part:IsA("BasePart") and part.CanCollide then
                      part.CanCollide = false
                   end
@@ -220,85 +199,129 @@ UniversalTab:CreateToggle({
             Connections.Noclip = nil
          end
       end
-   end,
+   end
 })
 
--- Hubs scripts
+UniversalTab:CreateToggle({
+   Name = "Fly",
+   CurrentValue = false,
+   Flag = "FlyToggle",
+   Callback = function(State)
+      if State then
+         local p = game.Players.LocalPlayer
+         local c = p.Character or p.CharacterAdded:Wait()
+         local root = c:WaitForChild("HumanoidRootPart")
+         Connections.Fly = game:GetService("RunService").RenderStepped:Connect(function()
+            if root then
+               root.Anchored = true
+               local v = Vector3.new(0,0,0)
+               local uis = game:GetService("UserInputService")
+               if uis:IsKeyDown(Enum.KeyCode.W) then
+                  v = v + root.CFrame.LookVector
+               end
+               if uis:IsKeyDown(Enum.KeyCode.S) then
+                  v = v - root.CFrame.LookVector
+               end
+               if uis:IsKeyDown(Enum.KeyCode.A) then
+                  v = v - root.CFrame.RightVector
+               end
+               if uis:IsKeyDown(Enum.KeyCode.D) then
+                  v = v + root.CFrame.RightVector
+               end
+               if uis:IsKeyDown(Enum.KeyCode.Space) then
+                  v = v + Vector3.new(0,1,0)
+               end
+               if uis:IsKeyDown(Enum.KeyCode.LeftShift) then
+                  v = v - Vector3.new(0,1,0)
+               end
+               root.CFrame = root.CFrame + v * 0.6
+            end
+         end)
+      else
+         if Connections.Fly then
+            Connections.Fly:Disconnect()
+            Connections.Fly = nil
+         end
+         local p = game.Players.LocalPlayer
+         local c = p.Character
+         local root = c and c:FindFirstChild("HumanoidRootPart")
+         if root then
+            root.Anchored = false
+         end
+      end
+   end
+})
+
 HubsTab:CreateSection("Scripts")
 
 HubsTab:CreateButton({
    Name = "Kncrypt Hub",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Kncrypt/refs/heads/main/Loader.lua"))()
-   end,
+   end
 })
 
 HubsTab:CreateButton({
    Name = "Speed Hub",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()
-   end,
+   end
 })
 
--- Scripts for games
 GamesTab:CreateSection("Scripts")
 
 GamesTab:CreateButton({
    Name = "Doors",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
-   end,
+   end
 })
 
 GamesTab:CreateButton({
    Name = "Pressure",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Fire-Hub/main/Loader"))()
-   end,
+   end
 })
 
--- Script settings
 SettingsTab:CreateSection("Settings")
 
-UniversalTab:CreateSlider({
+SettingsTab:CreateSlider({
    Name = "Speed",
    Range = {2, 60},
    Increment = 1,
    Suffix = " Studs",
    CurrentValue = speedValue,
-   SectionParent = UtilitiesCategory,
    Flag = "WalkSpeedSlider",
    Callback = function(Value)
       speedValue = Value
-   end,
+   end
 })
 
-UniversalTab:CreateSlider({
+SettingsTab:CreateSlider({
    Name = "Jump",
    Range = {2, 120},
    Increment = 5,
    Suffix = " Power",
    CurrentValue = jumpPowerValue,
-   SectionParent = UtilitiesCategory,
    Flag = "JumpPowerSlider",
    Callback = function(Value)
       jumpPowerValue = Value
-   end,
+   end
 })
 
--- Keybinds
 SettingsTab:CreateSection("Binds")
 
 SettingsTab:CreateKeybind({
    Name = "Toggle Noclip",
-   CurrentKeybind = Enum.KeyCode.N,
+   CurrentKeybind = Enum.KeyCode.Q,
    Flag = "NoclipKeybind",
    Callback = function()
-      local noclipToggle = Rayfield.Flags["NoclipToggle"]
-      if noclipToggle then
-         noclipToggle:Set(not noclipToggle.CurrentValue)
+      local tog = Rayfield.Flags["NoclipToggle"]
+      if tog then
+         tog:Set(not tog.CurrentValue)
       end
-   end,
+   end
 })
 
 SettingsTab:CreateKeybind({
@@ -306,17 +329,16 @@ SettingsTab:CreateKeybind({
    CurrentKeybind = Enum.KeyCode.V,
    Flag = "FlyKeybind",
    Callback = function()
-      local flyToggle = Rayfield.Flags["FlyToggle"]
-      if flyToggle then
-         flyToggle:Set(not flyToggle.CurrentValue)
+      local tog = Rayfield.Flags["FlyToggle"]
+      if tog then
+         tog:Set(not tog.CurrentValue)
       end
-   end,
+   end
 })
 
 Rayfield:Notify({
    Title = "Welcome!",
    Content = "Welcome to BX Hub!",
    Duration = 3,
-   Image = nil,
+   Image = nil
 })
-
