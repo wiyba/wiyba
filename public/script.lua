@@ -11,8 +11,8 @@ local Window = Rayfield:CreateWindow({
       FolderName = nil,
       FileName = nil
    },
-   KeySystem = false
-   WindowSize = Vector2.new(500, 700)
+   KeySystem = false,
+   WindowSize = Vector2.new(500, 700),
    OpenCloseKey = Enum.KeyCode.RightControl
 })
 
