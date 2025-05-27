@@ -1,14 +1,130 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="utf-8" />
-        <title>wiyba</title>
-    </head>
-    <body>
-        <p>
-            <a href="https://discord.com/users/982885434315120653">
-                <img src="https://lanyard.cnrad.dev/api/982885434315120653?hideBadges=true&showDisplayName=true&hideDecoration=false&hideTimestamp=false&idleMessage=Probably%20doing%20nothing&borderRadius=20px" alt="Discord Presence">
-            </a>
-        </p>
-    </body>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>wiyba</title>
+	<link rel="icon" type="image/png" href="/images/favicon.png">
+	<link rel="stylesheet" href="style.css">
+	<style>
+		/* === базовые переменные === */
+		:root {
+			--text-color:        #CDD6F4;
+			--background-color:  #1E1E2E;
+			--purple-first:      #a044ff;
+			--purple-second:     #6a3093;
+			--url-color:         #B4BEFE;
+		}
+
+		/* === базовая типографика === */
+		@font-face {
+			font-family: "nerd-font";
+			src: url("font.ttf") format("truetype");
+		}
+
+		body {
+            padding: 0px;
+            margin: 0;
+            background: var(--background-color) url("img19.jpg") no-repeat center / cover fixed;
+            font-family: 'nerd-font', monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+		/* === ссылки/текст в терминальном стиле === */
+		.text {
+			color: var(--text-color);
+			font-size: 1.2rem;
+			text-decoration: none;
+			margin:0 0 5px;
+		}
+
+		/* === контейнер с «стеклянной» карточкой === */
+		.container {
+			width: 90vw;
+			height: 90vh;
+			max-width: 2560px;   /* масштаб до 2k */
+			max-height: 1440px;  /* масштаб до 2k */
+			border-radius: 20px;
+			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			box-sizing: border-box;
+			padding: 0; /* внутренний отступ задаётся контенту */
+			position: relative;
+		}
+
+		/* внешняя «рамка» (толщина уменьшена в 2 раза) */
+		.container::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			padding: 4px; /* было 4px */
+			background: linear-gradient(145deg, var(--purple-first), var(--purple-second));
+			border-radius: inherit;
+			-webkit-mask: 
+				linear-gradient(#fff 0 0) content-box,
+				linear-gradient(#fff 0 0);
+			-webkit-mask-composite: xor;
+			        mask-composite: exclude;
+			z-index: 0;
+		}
+
+		/* полупрозрачный фон карточки */
+		.container::after {
+			content: "";
+			position: absolute;
+			inset: 2px; /* синхронно с ::before */
+			border-radius: calc(20px - 2px);
+			background: rgba(30, 30, 46, 0.88);
+			backdrop-filter: blur(12px);
+			-webkit-backdrop-filter: blur(12px);
+			z-index: 1;
+		}
+
+		/* содержимое карточки */
+		.content {
+			position: relative;
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+			padding: 30px; /* тот же паддинг слева/справа */
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+
+        /* стили */
+        .term,
+        a.term{
+            display:block;
+            margin:0 0 5px;
+            text-decoration:none;
+            color:#CDD6F4;
+            padding-left:0;
+        }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<span class="term">[wiyba@localhost /]$ ls && echo</span>
+            <span class="term">images public font.ttf img19.jpg index.html</span>
+            <span class="term">&nbsp;</span>
+            <span class="term">[wiyba@localhost /]$ cat info.txt && echo</span>
+            <span class="term">hello world!</span>
+            <span class="term">&nbsp;</span>
+            <span class="term">[wiyba@localhost /]$ cat links.txt</span>
+            <a href="https://marz.wiyba.org/dashboard" class="term">https://marz.wiyba.org/dashboard</a>
+            <a href="https://keen.wiyba.org/" class="term">https://keen.wiyba.org</a>
+            <a href="https://draw.wiyba.org/" class="term">https://draw.wiyba.org</a>
+		</div>
+	</div>
+</body>
 </html>
