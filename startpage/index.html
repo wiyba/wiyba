@@ -43,11 +43,15 @@
     commandPathDelimiter: '/',
     commandSearchDelimiter: ' ',
     defaultSearchTemplate: 'https://www.google.com/search?q={}',
-    openLinksInNewTab: true,
+    openLinksInNewTab: false,
     suggestionLimit: 5,
   };
 
   const COMMANDS = new Map([
+    
+    // github
+    ['git', { name: 'github', searchTemplate: '/search?q={}', suggestions: ['git/wiyba', 'git/bx-team' 'git/trending'], url: 'https://github.com' }],
+
     // google
     ['g', { name: 'google', suggestions: ['g/mail', 'g/drive'], url: 'https://google.com' }],
     ['g/mail', { url: 'https://mail.google.com/mail/u/0/' }],
@@ -58,9 +62,6 @@
 
     // telegram
     ['t', { name: 'telegram', searchTemplate: '/k/#@{}', url: 'https://web.telegram.org/k' }],
-
-    // github
-    ['gh', { name: 'github', searchTemplate: '/search?q={}', suggestions: ['g/trending'], url: 'https://github.com' }],
 
     // personal websites
     ['w', { name: 'wiyba', suggestions: ['w/marz', 'w/keen'], url: 'https://wiyba.org' }],
@@ -74,14 +75,9 @@
     ['a/gemini', { url: 'https://gemini.google.com' }],
     ['a/grok', { url: 'https://grok.com' }],
     ['a/perplexity', { url: 'https://www.perplexity.ai' }],
-
-    // cloudflare
-    ['c', { name: 'cloudflare', url: 'https://dash.cloudflare.com' }],
     
     // localhosts
-    ['0', { name: 'localhost', suggestions: ['0:54323', '0:54324'], url: 'http://localhost:3000' }],
-    ['0:54323', { url: 'http://localhost:54323' }],
-    ['0:54324', { url: 'http://localhost:54324' }],
+    ['0', { name: 'localhost', suggestions: [], url: 'http://localhost' }],
   ]);
 </script>
 
@@ -399,12 +395,14 @@
 
       if (COMMANDS.has(pathKey)) {
         const command = COMMANDS.get(pathKey);
-        const url = pathKey === 't'
-          ? `${command.url}/#@${path}`
-          : `${new URL(command.url).origin}/${path}`;
+        const url =
+          pathKey === 't'
+            ? `${command.url}/#@${path}`
+            : pathKey === '0'
+              ? `http://localhost:${path}`
+              : `${new URL(command.url).origin}/${path}`;
         return { key: pathKey, path, query, splitBy, url };
-      };
-
+      }
 
 
       const url = Search.#formatSearchUrl(CONFIG.defaultSearchTemplate, query);
