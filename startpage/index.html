@@ -10,14 +10,14 @@
     font-family: 'SpaceGrotesk';
     font-style: normal;
     font-weight: normal;
-    src: url('./fonts/SpaceGrotesk-Regular.woff2') format('woff2');
+    src: url('../fonts/SpaceGrotesk-Regular.woff2') format('woff2');
   }
 
   @font-face {
     font-family: 'SpaceGrotesk';
     font-style: normal;
     font-weight: bold;
-    src: url('./fonts/SpaceGrotesk-Bold.woff2') format('woff2');
+    src: url('../fonts/SpaceGrotesk-Bold.woff2') format('woff2');
   }
 
   :root {
@@ -42,38 +42,43 @@
   const CONFIG = {
     commandPathDelimiter: '/',
     commandSearchDelimiter: ' ',
-    defaultSearchTemplate: 'https://duckduckgo.com/?q={}',
+    defaultSearchTemplate: 'https://www.google.com/search?q={}',
     openLinksInNewTab: true,
     suggestionLimit: 5,
   };
 
-  // prettier-ignore
   const COMMANDS = new Map([
-    ['a', { name: 'AI', searchTemplate: '/?temporary-chat=true&q={}', suggestions: ['a/copilot', 'a/deepseek', 'a/gemini', 'a/grok', 'a/perplexity'], url: 'https://chatgpt.com/?temporary-chat=true' }],
+    // google
+    ['g', { name: 'google', suggestions: ['g/mail', 'g/drive'], url: 'https://google.com' }],
+    ['g/mail', { url: 'https://mail.google.com/mail/u/0/' }],
+    ['g/drive', { url: 'https://drive.google.com/drive/u/0/' }],
+
+    // youtube
+    ['y', { name: 'youtube', searchTemplate: '/results?search_query={}', url: 'https://www.youtube.com' }],
+
+    // telegram
+    ['t', { name: 'telegram', searchTemplate: '/k/#@{}', url: 'https://web.telegram.org/k' }],
+
+    // github
+    ['gh', { name: 'github', searchTemplate: '/search?q={}', suggestions: ['g/trending'], url: 'https://github.com' }],
+
+    // personal websites
+    ['w', { name: 'wiyba', suggestions: ['w/marz', 'w/keen'], url: 'https://wiyba.org' }],
+    ['w/marz', { url: 'https://marz.wiyba.org/dashboard' }],
+    ['w/keen', { url: 'https://keen.wiyba.org' }],
+
+    // ai
+    ['a', { name: 'ai', searchTemplate: '/?temporary-chat=true&q={}', suggestions: ['a/copilot', 'a/deepseek', 'a/gemini', 'a/grok', 'a/perplexity'], url: 'https://chatgpt.com/?temporary-chat=true' }],
     ['a/copilot', { url: 'https://github.com/copilot' }],
     ['a/deepseek', { url: 'https://chat.deepseek.com' }],
     ['a/gemini', { url: 'https://gemini.google.com' }],
     ['a/grok', { url: 'https://grok.com' }],
     ['a/perplexity', { url: 'https://www.perplexity.ai' }],
-    ['c', { name: 'Cloudflare', url: 'https://dash.cloudflare.com' }],
-    ['d', { name: 'Discord', url: 'https://discord.com/channels/@me' }],
-    ['f', { name: 'Finances', url: 'https://docs.google.com/spreadsheets/d/1sjSOdlKaE-BcraiEDjqfakCXietLTSUY1ny6gQTj-oQ/edit' }],
-    ['g', { name: 'GitHub', searchTemplate: '/search?q={}', suggestions: ['g/trending'], url: 'https://github.com' }],
-    ['h', { name: 'Hetzner', url: 'https://console.hetzner.cloud/projects' }],
-    ['i', { name: 'Instant', url: 'https://www.instantdb.com/dash' }],
-    ['p', { name: 'Proton', suggestions: ['p/pass', 'p/drive'], url: 'https://mail.proton.me/u/0/inbox' }],
-    ['p/drive', { url: 'https://drive.proton.me/u/0' }],
-    ['p/pass', { url: 'https://pass.proton.me/u/0' }],
-    ['s', { name: 'Supabase', url: 'https://supabase.com/dashboard/projects' }],
-    ['t', { name: 'TickTick', url: 'https://ticktick.com/webapp/#q/today/tasks' }],
-    ['v', { name: 'Vercel', url: 'https://vercel.com/dashboard' }],
-    ['x', { name: 'xvvvyz', suggestions: ['x/seerr', 'x/torrent', 'x/radarr', 'x/sonarr', 'x/bazarr'], url: 'https://xvvvyz.xyz' }],
-    ['x/bazarr', { url: 'https://bazarr.xvvvyz.xyz' }],
-    ['x/radarr', { url: 'https://radarr.xvvvyz.xyz' }],
-    ['x/seerr', { url: 'https://jellyseerr.xvvvyz.xyz' }],
-    ['x/sonarr', { url: 'https://sonarr.xvvvyz.xyz' }],
-    ['x/torrent', { url: 'https://torrent.xvvvyz.xyz' }],
-    ['y', { name: 'YouTube', searchTemplate: '/results?search_query={}', url: 'https://www.youtube.com/feed/subscriptions' }],
+
+    // cloudflare
+    ['c', { name: 'cloudflare', url: 'https://dash.cloudflare.com' }],
+    
+    // localhosts
     ['0', { name: 'localhost', suggestions: ['0:54323', '0:54324'], url: 'http://localhost:3000' }],
     ['0:54323', { url: 'http://localhost:54323' }],
     ['0:54324', { url: 'http://localhost:54324' }],
@@ -394,9 +399,13 @@
 
       if (COMMANDS.has(pathKey)) {
         const command = COMMANDS.get(pathKey);
-        const url = `${new URL(command.url).origin}/${path}`;
+        const url = pathKey === 't'
+          ? `${command.url}/#@${path}`
+          : `${new URL(command.url).origin}/${path}`;
         return { key: pathKey, path, query, splitBy, url };
-      }
+      };
+
+
 
       const url = Search.#formatSearchUrl(CONFIG.defaultSearchTemplate, query);
       return { query, search: query, url };
