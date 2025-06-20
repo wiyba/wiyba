@@ -48,10 +48,6 @@
   };
 
   const COMMANDS = new Map([
-    
-    // github
-    ['git', { name: 'github', searchTemplate: '/search?q={}', suggestions: ['git/wiyba', 'git/bx-team' 'git/trending'], url: 'https://github.com' }],
-
     // google
     ['g', { name: 'google', suggestions: ['g/mail', 'g/drive'], url: 'https://google.com' }],
     ['g/mail', { url: 'https://mail.google.com/mail/u/0/' }],
@@ -59,6 +55,10 @@
 
     // youtube
     ['y', { name: 'youtube', searchTemplate: '/results?search_query={}', url: 'https://www.youtube.com' }],
+
+    // github
+    ['r', { name: 'github', searchTemplate: '/search?q={}', suggestions: ['r/wiyba', 'r/bx-team', 'r/trending'], url: 'https://github.com' }],   // github
+    ['r', { name: 'github', searchTemplate: '/search?q={}', suggestions: ['r/wiyba', 'r/bx-team', 'r/trending'], url: 'https://github.com' }],
 
     // telegram
     ['t', { name: 'telegram', searchTemplate: '/k/#@{}', url: 'https://web.telegram.org/k' }],
@@ -75,7 +75,10 @@
     ['a/gemini', { url: 'https://gemini.google.com' }],
     ['a/grok', { url: 'https://grok.com' }],
     ['a/perplexity', { url: 'https://www.perplexity.ai' }],
-    
+
+    // local files
+    ['f', { name: 'file', searchTemplate: '/{}', url: 'file:/' }],
+
     // localhosts
     ['0', { name: 'localhost', suggestions: [], url: 'http://localhost' }],
   ]);
@@ -140,7 +143,7 @@
 
     @media (min-width: 35rem) {
       .commands {
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(8, 1fr);
       }
     }
   </style>
@@ -363,7 +366,7 @@
     }
 
     static #isUrl(s) {
-      return /^((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)$/i.test(s);
+      return /^((https?:|file:)\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?$/i.test(s);
     }
 
     static #parseQuery = (raw) => {
