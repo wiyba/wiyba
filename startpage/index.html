@@ -76,9 +76,6 @@
     ['a/grok', { url: 'https://grok.com' }],
     ['a/perplexity', { url: 'https://www.perplexity.ai' }],
 
-    // local files
-    ['f', { name: 'file', searchTemplate: '/{}', url: 'file:/' }],
-
     // localhosts
     ['0', { name: 'localhost', suggestions: [], url: 'http://localhost' }],
   ]);
@@ -143,7 +140,7 @@
 
     @media (min-width: 35rem) {
       .commands {
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(7, 1fr);
       }
     }
   </style>
@@ -366,7 +363,7 @@
     }
 
     static #isUrl(s) {
-      return /^((https?:|file:)\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?$/i.test(s);
+      return /^((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)$/i.test(s);
     }
 
     static #parseQuery = (raw) => {
