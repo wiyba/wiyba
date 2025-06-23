@@ -48,20 +48,20 @@
   };
 
   const COMMANDS = new Map([
-    // google
-    ['g', { name: 'google', suggestions: ['g/mail', 'g/drive'], url: 'https://google.com' }],
-    ['g/mail', { url: 'https://mail.google.com/mail/u/0/' }],
-    ['g/drive', { url: 'https://drive.google.com/drive/u/0/' }],
+    // github
+    ['g', { name: 'github', searchTemplate: '/search?q={}', suggestions: ['g/wiyba', 'g/bx-team', 'g/trending'], url: 'https://github.com' }],
+    
+    // reddit
+    ['r', { name: 'reddit', suggestions: ['r/unixporn', 'r/nixos'], searchTemplate: '/search?q={}', url: 'https://www.reddit.com' }],
+    ['r/unixporn', { url: 'https://www.reddit.com/r/unixporn' }],
+    ['r/nixos', { url: 'https://www.reddit.com/r/nixos' }],
 
     // youtube
     ['y', { name: 'youtube', searchTemplate: '/results?search_query={}', url: 'https://www.youtube.com' }],
 
-    // github
-    ['r', { name: 'github', searchTemplate: '/search?q={}', suggestions: ['r/wiyba', 'r/bx-team', 'r/trending'], url: 'https://github.com' }],   // github
-    ['r', { name: 'github', searchTemplate: '/search?q={}', suggestions: ['r/wiyba', 'r/bx-team', 'r/trending'], url: 'https://github.com' }],
-
-    // telegram
-    ['t', { name: 'telegram', searchTemplate: '/k/#@{}', url: 'https://web.telegram.org/k' }],
+    // twitch 
+    ['t', { name: 'twitch', suggestions: ['t/5opka'], searchTemplate: '/search?term={}', url: 'https://www.twitch.tv' }],
+    ['t/5opka', { url: 'https://twitch.tv/5opka' }],
 
     // personal websites
     ['w', { name: 'wiyba', suggestions: ['w/marz', 'w/keen'], url: 'https://wiyba.org' }],
@@ -69,10 +69,9 @@
     ['w/keen', { url: 'https://keen.wiyba.org' }],
 
     // ai
-    ['a', { name: 'ai', searchTemplate: '/?temporary-chat=true&q={}', suggestions: ['a/copilot', 'a/deepseek', 'a/gemini', 'a/grok', 'a/perplexity'], url: 'https://chatgpt.com/?temporary-chat=true' }],
+    ['a', { name: 'ai', searchTemplate: '/?temporary-chat=true&q={}', suggestions: ['a/copilot', 'a/chatgpt', 'a/grok', 'a/perplexity'], url: 'https://chatgpt.com/?temporary-chat=true' }],
     ['a/copilot', { url: 'https://github.com/copilot' }],
-    ['a/deepseek', { url: 'https://chat.deepseek.com' }],
-    ['a/gemini', { url: 'https://gemini.google.com' }],
+    ['a/chatgpt', { url: 'https://chat.deepseek.com' }],
     ['a/grok', { url: 'https://grok.com' }],
     ['a/perplexity', { url: 'https://www.perplexity.ai' }],
 
@@ -398,11 +397,11 @@
       if (COMMANDS.has(pathKey)) {
         const command = COMMANDS.get(pathKey);
         const url =
-          pathKey === 't'
-            ? `${command.url}/#@${path}`
-            : pathKey === '0'
-              ? `http://localhost:${path}`
-              : `${new URL(command.url).origin}/${path}`;
+        pathKey === '0'
+          ? `http://localhost:${path}`
+          : pathKey === 'r'
+            ? `https://www.reddit.com/r/${path}`
+            : `${new URL(command.url).origin}/${path}`;
         return { key: pathKey, path, query, splitBy, url };
       }
 
