@@ -117,6 +117,7 @@
       color: var(--color-text-subtle);
       position: absolute;
       transition: all var(--transition-speed);
+      font-size: 1.3rem;
     }
 
     .command:where(:focus, :hover) .key {
@@ -562,3 +563,99 @@
 
 <commands-component></commands-component>
 <search-component></search-component>
+
+<div class="clock" id="clock"></div>
+
+<style>
+  .clock {
+    position: absolute;
+    top: 7.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: var(--color-text);
+    font-weight: 400;
+    letter-spacing: .05em;
+  }
+</style>
+
+<script>
+  function updateClock() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2, '0');
+    const m = String(now.getMinutes()).padStart(2, '0');
+    const s = String(now.getSeconds()).padStart(2, '0');
+    document.getElementById('clock').textContent = `${h}:${m}`;
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>
+
+<div class="weather" id="weather"></div>
+
+<style>
+  @font-face {
+    font-family: 'icons';
+    src: url('../fonts/font.ttf') format('truetype');
+  }
+
+  .weather {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: var(--color-text);
+    font-weight: 400;
+    letter-spacing: .05em;
+    display: flex;
+    align-items: center;
+    gap: .4em;
+  }
+
+  .weather-icon {
+    font-family: 'icons';
+  }
+</style>
+
+<script>
+(() => {
+  const key = 'e434b5435a979de6e155570590bee89b';
+  const lat = 55.778;
+  const lon = 37.474;
+  const units = 'metric';
+  const symbol = '°';
+
+  const getIcon = (c) => {
+    if (c === '01d' || c === '01n') return '';
+    if (c === '02d') return '';
+    if (c === '02n') return '';
+    if (c.startsWith('03')) return '󰅟';
+    if (c.startsWith('04')) return '󰅟';
+    if (c.startsWith('09')) return '';
+    if (c === '10d') return '';
+    if (c === '10n') return '';
+    if (c.startsWith('11')) return '';
+    if (c.startsWith('13')) return '';
+    if (c.startsWith('50')) return '';
+    return '';
+  };
+
+  async function updateWeather() {
+    try {
+      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${key}&lang=ru`);
+      if (!res.ok) return;
+      const d = await res.json();
+      const temp = Math.round(d.main.temp);
+      const iconChar = getIcon(d.weather[0].icon);
+      document.getElementById('weather').innerHTML = `<span class="weather-icon">${iconChar}</span> ${temp}${symbol}`;
+    } catch (_) {}
+  }
+
+  updateWeather();
+  setInterval(updateWeather, 900000);
+})();
+</script>
+``` :contentReference[oaicite:0]{index=0}
+::contentReference[oaicite:1]{index=1}
+
