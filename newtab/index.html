@@ -627,32 +627,50 @@
   const symbol = '°';
 
   const getIcon = (c) => {
-    if (c === '01d' || c === '01n') return '';
-    if (c === '02d') return '';
-    if (c === '02n') return '';
-    if (c.startsWith('03')) return '󰅟';
-    if (c.startsWith('04')) return '󰅟';
-    if (c.startsWith('09')) return '';
-    if (c === '10d') return '';
-    if (c === '10n') return '';
-    if (c.startsWith('11')) return '';
-    if (c.startsWith('13')) return '';
-    if (c.startsWith('50')) return '';
-    return '';
+    switch (c) {
+      case '01d':
+      case '02d':
+        return ''; // ясно/немного облачно днём
+      case '01n':
+      case '02n':
+        return ''; // ясно/немного облачно ночью
+      case '03d':
+      case '03n':
+      case '04d':
+      case '04n':
+        return '󰖐'; // облачно
+      case '09d':
+      case '09n':
+      case '10d':
+      case '10n':
+        return '󰖖'; // дождь
+      case '11d':
+      case '11n':
+        return '󰖓'; // гроза
+      case '13d':
+      case '13n':
+        return '󰖒'; // снег
+      case '50d':
+      case '50n':
+        return '󰖑'; // туман
+      default:
+        return '?';
+    }
   };
 
   async function updateWeather() {
     try {
       const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${key}&lang=ru`);
       if (!res.ok) return;
-      const d = await res.json();
-      const temp = Math.round(d.main.temp);
-      const iconChar = getIcon(d.weather[0].icon);
+      const data = await res.json();
+      const temp = Math.round(data.main.temp);
+      const iconChar = getIcon(data.weather[0].icon);
       document.getElementById('weather').innerHTML = `<span class="weather-icon">${iconChar}</span> ${temp}${symbol}`;
     } catch (_) {}
   }
 
   updateWeather();
-  setInterval(updateWeather, 900000);
+  setInterval(updateWeather, 600000);
 })();
 </script>
+
