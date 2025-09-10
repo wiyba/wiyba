@@ -1,33 +1,45 @@
 <div align="center" class="hello" style="display: flex; flex-flow: column wrap;">
- <img src="assets/img/wiyba.svg"/>
- <br><br>
+	<img src="assets/img/wiyba.svg"/>
+ 	<br><br>
+	
+ 	16 y.o. developer & designer born in Russia
+ 	Working on some BX Team projects
+ 	All links are located below \/ \/
 </div>
 
 ----
 
 <div align="center" class="discord" style="display: flex; flex-flow: column wrap;">
- <img src="assets/img/discord.svg"/>
- <br><br>
-
- [![discord server](https://img.shields.io/discord/931595732752953375?color=3f48cc&label=BX%20Team&logo=discord&logoColor=white)](https://discord.gg/qNyybSSPm5) 
- <br><br>
- [![discord profile](https://lanyard.cnrad.dev/api/982885434315120653?hideBadges=true&hideTag=true&hideSpotify=true&hideActivity=true)](https://discord.com/users/982885434315120653)
- <br>
- ![playing](https://api.statusbadges.me/badge/playing/982885434315120653)
- ![vscode](https://api.statusbadges.me/badge/vscode/982885434315120653)
- [![spotify](https://api.statusbadges.me/badge/spotify/982885434315120653)](https://api.statusbadges.me/openspotify/982885434315120653)
+	<img src="assets/img/discord.svg"/>
+	<br><br>
+	
+[![discord server](https://img.shields.io/discord/931595732752953375?color=3f48cc&label=BX%20Team&logo=discord&logoColor=white)](https://discord.gg/qNyybSSPm5)
+	<br><br>
+	[![discord profile](https://lanyard.cnrad.dev/api/982885434315120653?hideBadges=true&hideTag=true&hideSpotify=true&hideActivity=true)](https://discord.com/users/982885434315120653)
+	<br>
+	![playing](https://api.statusbadges.me/badge/playing/982885434315120653)
+	![vscode](https://api.statusbadges.me/badge/vscode/982885434315120653)
+	[![spotify](https://api.statusbadges.me/badge/spotify/982885434315120653)](https://api.statusbadges.me/openspotify/982885434315120653)
 </div>
 
 ----
 
 <div align="center" class="socials" style="display: flex; flex-flow: column wrap;">
 	<img src="assets/img/socials.svg"/>
- <br><br>
- <a href="https://t.me/wiybaa"><img src="https://www.svgrepo.com/show/349527/telegram.svg" width="50"/></a>
- <a href="https://open.spotify.com/user/315t2zt6fseklxcdjm6nc5kvlrdm"><img src="https://www.svgrepo.com/show/349511/spotify.svg" width="50"/></a>
- <a href="https://steamcommunity.com/id/wiyba/"><img src="https://www.svgrepo.com/show/349516/steam.svg" width="50"/></a>
- <a href="weixin://dl/chat?wiybaa"><img src="https://www.svgrepo.com/show/303187/wechat-logo.svg" width="50"/></a>
- <br><br>or...<br><br>
- <a>✉️ Email: <a href="mailto://contact@wiyba.org">contact@wiyba.org</a></a><br>
- <a>👉 Website: <a href="https://wiyba.org">wiyba.org</a></a>
+	<br><br>
+	<a href="https://t.me/wiybaa">
+		<img src="https://www.svgrepo.com/show/349527/telegram.svg" width="50" />
+	</a>
+	<a href="https://open.spotify.com/user/315t2zt6fseklxcdjm6nc5kvlrdm">
+		<img src="https://www.svgrepo.com/show/349511/spotify.svg" width="50" />
+	</a>
+	<a href="https://steamcommunity.com/id/wiyba/">
+		<img src="https://www.svgrepo.com/show/349516/steam.svg" width="50" />
+	</a>
+	<a href="weixin://dl/chat?wiybaa">
+		<img src="https://www.svgrepo.com/show/303187/wechat-logo.svg" width="50" />
+	</a>
+	<br>and...<br>
+	<a>✉️ Email: <a href="mailto://contact@wiyba.org">contact@wiyba.org</a></a><br>
+	<a>👉 Website: <a href="https://wiyba.org">wiyba.org</a></a>
 </div>
