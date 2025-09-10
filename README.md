@@ -1,10 +1,11 @@
 <div align="center" class="hello" style="display: flex; flex-flow: column wrap;">
 	<img src="assets/img/wiyba.svg"/>
  	<br><br>
-	
- 	16 y.o. developer & designer born in Russia
- 	Working on some BX Team projects
- 	All links are located below \/ \/
+	<p>
+ 		16 y.o. developer & designer born in Russia<br>
+ 		Working on some BX Team projects<br>
+ 		\/ All links are located below \/
+	</p>
 </div>
 
 ----
