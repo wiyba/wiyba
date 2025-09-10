@@ -3,6 +3,8 @@
  <br><br>
 </div>
 
+----
+
 <div align="center" class="discord" style="display: flex; flex-flow: column wrap;">
  <img src="assets/img/discord.svg"/>
  <br><br>
@@ -15,6 +17,8 @@
  ![vscode](https://api.statusbadges.me/badge/vscode/982885434315120653)
  [![spotify](https://api.statusbadges.me/badge/spotify/982885434315120653)](https://api.statusbadges.me/openspotify/982885434315120653)
 </div>
+
+----
 
 <div align="center" class="socials" style="display: flex; flex-flow: column wrap;">
 	<img src="assets/img/socials.svg"/>
