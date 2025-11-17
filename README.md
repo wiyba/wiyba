@@ -2,7 +2,7 @@
 	<img src="assets/img/wiyba.svg"/>
  	<br><br>
 	<p>
- 		16 y.o. developer & designer born in Russia<br>
+ 		17 y.o. developer & designer born in Russia<br>
  		Working on some BX Team projects<br>
  		\/ All links are located below \/
 	</p>
