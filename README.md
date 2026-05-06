@@ -4,7 +4,8 @@
 	<p>
  		17 y.o. developer & designer born in Russia<br>
  		Working on some BX Team projects<br>
- 		\/ All links are located below \/
+		More info here - https://wiyba.org<br>
+ 		\/ All other links are located below \/
 	</p>
 </div>
 
@@ -18,9 +19,6 @@
 	<br><br>
 	[![discord profile](https://lanyard.cnrad.dev/api/982885434315120653?hideBadges=true&hideTag=true&hideSpotify=true&hideActivity=true)](https://discord.com/users/982885434315120653)
 	<br>
-	![playing](https://api.statusbadges.me/badge/playing/982885434315120653)
-	![vscode](https://api.statusbadges.me/badge/vscode/982885434315120653)
-	[![spotify](https://api.statusbadges.me/badge/spotify/982885434315120653)](https://api.statusbadges.me/openspotify/982885434315120653)
 </div>
 
 ----
