@@ -3,22 +3,9 @@
  	<br><br>
 	<p>
  		17 y.o. developer & designer born in Russia<br>
- 		Working on some BX Team projects<br>
-		More info here - https://wiyba.org<br>
- 		\/ All other links are located below \/
+		lately doing devsecops using nix language<br>
+ 		working on some bx-team projects<br>
 	</p>
-</div>
-
-----
-
-<div align="center" class="discord" style="display: flex; flex-flow: column wrap;">
-	<img src="assets/img/discord.svg"/>
-	<br><br>
-	
-[![discord server](https://img.shields.io/discord/931595732752953375?color=3f48cc&label=BX%20Team&logo=discord&logoColor=white)](https://discord.gg/qNyybSSPm5)
-	<br><br>
-	[![discord profile](https://lanyard.cnrad.dev/api/982885434315120653?hideBadges=true&hideTag=true&hideSpotify=true&hideActivity=true)](https://discord.com/users/982885434315120653)
-	<br>
 </div>
 
 ----
@@ -31,6 +18,6 @@
  	<a href="https://steamcommunity.com/id/wiyba/"><img src="https://www.svgrepo.com/show/349516/steam.svg" width="50"/></a>
  	<a href="weixin://dl/chat?wiybaa"><img src="https://www.svgrepo.com/show/303187/wechat-logo.svg" width="50"/></a>
  	<br>and..<br>
- 	<a>✉️ Email: <a href="mailto://contact@wiyba.org">contact@wiyba.org</a></a><br>
- 	<a>👉 Website: <a href="https://wiyba.org">wiyba.org</a></a>
+ 	<a>✉️ email: <a href="mailto://contact@wiyba.org">contact@wiyba.org</a></a><br>
+ 	<a>👉 website: <a href="https://wiyba.org">wiyba.org</a></a>
 </div>
